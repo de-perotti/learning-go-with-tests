@@ -1,8 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/de-perotti/learning-go-with-tests/pkgs/rolezao"
+)
 
 func main() {
-	
-	fmt.Println("rolezao")
+	fmt.Println(rolezao.PrintRolezao(""))
 }
