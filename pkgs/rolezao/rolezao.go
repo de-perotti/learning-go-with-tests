@@ -4,10 +4,23 @@ package rolezao
 import "strings"
 
 // PrintRolezao Essa funçao aqui é braba
-func PrintRolezao(onde string) string {
-	if strings.Trim(onde, "\t ") == "" {
-		return "so um rolezinho"
-	}
+func PrintRolezao(onde, proverbialidade string) string {
+	isEmpty := strings.Trim(onde, "\t ") == ""
+	switch proverbialidade {
+	case "openenglish":
+		{
+			if isEmpty {
+				return "dudes do be doo"
+			}
 
-	return "rolezao " + onde
+			return "dudes do be meeting at " + onde
+		}
+	default:
+		{
+			if isEmpty {
+				return "so um rolezinho"
+			}
+			return "rolezao " + onde
+		}
+	}
 }
