@@ -5,7 +5,7 @@ import "strings"
 
 // PrintRolezao Essa funçao aqui é braba
 func PrintRolezao(onde, proverbialidade string) string {
-	isEmpty := strings.Trim(onde, "\t ") == ""
+	isEmpty := strings.TrimSpace(onde) == ""
 	switch proverbialidade {
 	case "openenglish":
 		{

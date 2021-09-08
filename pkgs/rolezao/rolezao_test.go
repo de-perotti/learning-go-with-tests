@@ -31,7 +31,8 @@ func TestPrintRolezao(t *testing.T) {
 	}{
 		{" ", "so um rolezinho"},
 		{"\t", "so um rolezinho"},
-		{"\r", "rolezao \r"},
+		{"\r", "so um rolezinho"},
+		{"\n", "so um rolezinho"},
 	} {
 		t.Run("da para passar string com whitespace e dar um rolezinho", func(t *testing.T) {
 			rolezao := PrintRolezao(tc.onde, "aramaico")
