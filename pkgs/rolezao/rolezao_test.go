@@ -1,6 +1,9 @@
 package rolezao
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestPrintRolezao(t *testing.T) {
 	t.Run("role fala openenglish tbm", func(t *testing.T) {
@@ -34,7 +37,7 @@ func TestPrintRolezao(t *testing.T) {
 		{"\r", "so um rolezinho"},
 		{"\n", "so um rolezinho"},
 	} {
-		t.Run("da para passar string com whitespace e dar um rolezinho", func(t *testing.T) {
+		t.Run(fmt.Sprintf("da para passar string com whitespace (%q) e dar um rolezinho", tc.onde), func(t *testing.T) {
 			rolezao := PrintRolezao(tc.onde, "aramaico")
 
 			if rolezao != tc.want {
